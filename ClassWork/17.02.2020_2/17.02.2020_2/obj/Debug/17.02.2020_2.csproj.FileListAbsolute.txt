@@ -1,0 +1,11 @@
+E:\EntityFramework\ClassWork\17.02.2020_2\17.02.2020_2\bin\Debug\17.02.2020_2.exe.config
+E:\EntityFramework\ClassWork\17.02.2020_2\17.02.2020_2\bin\Debug\17.02.2020_2.exe
+E:\EntityFramework\ClassWork\17.02.2020_2\17.02.2020_2\bin\Debug\17.02.2020_2.pdb
+E:\EntityFramework\ClassWork\17.02.2020_2\17.02.2020_2\bin\Debug\EntityFramework.dll
+E:\EntityFramework\ClassWork\17.02.2020_2\17.02.2020_2\bin\Debug\EntityFramework.SqlServer.dll
+E:\EntityFramework\ClassWork\17.02.2020_2\17.02.2020_2\bin\Debug\EntityFramework.xml
+E:\EntityFramework\ClassWork\17.02.2020_2\17.02.2020_2\bin\Debug\EntityFramework.SqlServer.xml
+E:\EntityFramework\ClassWork\17.02.2020_2\17.02.2020_2\obj\Debug\17.02.2020_2.csprojAssemblyReference.cache
+E:\EntityFramework\ClassWork\17.02.2020_2\17.02.2020_2\obj\Debug\17.02.2020_2.csproj.CopyComplete
+E:\EntityFramework\ClassWork\17.02.2020_2\17.02.2020_2\obj\Debug\17.02.2020_2.exe
+E:\EntityFramework\ClassWork\17.02.2020_2\17.02.2020_2\obj\Debug\17.02.2020_2.pdb

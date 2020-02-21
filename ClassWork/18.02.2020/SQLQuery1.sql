@@ -1,0 +1,26 @@
+﻿GO
+CREATE DATABASE University
+GO
+CREATE TABLE Specializations
+(
+Id INT NOT NULL PRIMARY KEY IDENTITY,
+[Name] NVARCHAR(150) NOT NULL CHECK([Name]!='')
+)
+GO
+CREATE TABLE Student
+(
+Id INT NOT NULL PRIMARY KEY IDENTITY,
+[Name] NVARCHAR(150) NOT NULL CHECK([Name]!=''),
+Surname NVARCHAR(150) NOT NULL CHECK(Surname!=''),
+[Address] NVARCHAR(150) NOT NULL CHECK([Address]!=''),
+Phone NVARCHAR(150) NOT NULL CHECK(Phone!=''),
+Specialization_Id INT FOREIGN KEY REFERENCES Specializations(Id)
+)
+GO
+CREATE TABLE Subjects
+(
+Id INT NOT NULL PRIMARY KEY IDENTITY,
+[Name] NVARCHAR(150) NOT NULL CHECK([Name]!=''),
+AmountOfHour INT NOT NULL,
+Specialization_Id INT FOREIGN KEY REFERENCES Specializations(Id)
+)

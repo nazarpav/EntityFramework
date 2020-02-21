@@ -1,0 +1,6 @@
+E:\EntityFramework\ClassWork\17.02.2020\17.02.2020\bin\Debug\17.02.2020.exe.config
+E:\EntityFramework\ClassWork\17.02.2020\17.02.2020\bin\Debug\17.02.2020.exe
+E:\EntityFramework\ClassWork\17.02.2020\17.02.2020\bin\Debug\17.02.2020.pdb
+E:\EntityFramework\ClassWork\17.02.2020\17.02.2020\obj\Debug\17.02.2020.csprojAssemblyReference.cache
+E:\EntityFramework\ClassWork\17.02.2020\17.02.2020\obj\Debug\17.02.2020.exe
+E:\EntityFramework\ClassWork\17.02.2020\17.02.2020\obj\Debug\17.02.2020.pdb

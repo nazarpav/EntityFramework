@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="UnivesriryCtx2.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="UnivesriryCtx2StoreContainer">
+    <EntitySet Name="Specializations" EntityType="UnivesriryCtx2.Store.Specializations" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="StudentsSet" EntityType="UnivesriryCtx2.Store.StudentsSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SubjectsSet" EntityType="UnivesriryCtx2.Store.SubjectsSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="StudentsSpecializations" Association="UnivesriryCtx2.Store.StudentsSpecializations">
+      <End Role="Students" EntitySet="StudentsSet" />
+      <End Role="Specializations" EntitySet="Specializations" />
+    </AssociationSet>
+    <AssociationSet Name="SubjectsSpecializations" Association="UnivesriryCtx2.Store.SubjectsSpecializations">
+      <End Role="Subjects" EntitySet="SubjectsSet" />
+      <End Role="Specializations" EntitySet="Specializations" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Specializations">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StudentsId" Type="int" Nullable="false" />
+    <Property Name="SubjectsId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StudentsSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Surname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Address" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Phone" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SubjectsSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="AmountOfHour" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="StudentsSpecializations">
+    <End Role="Students" Type="UnivesriryCtx2.Store.StudentsSet" Multiplicity="1" />
+    <End Role="Specializations" Type="UnivesriryCtx2.Store.Specializations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Students">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Specializations">
+        <PropertyRef Name="StudentsId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SubjectsSpecializations">
+    <End Role="Subjects" Type="UnivesriryCtx2.Store.SubjectsSet" Multiplicity="1" />
+    <End Role="Specializations" Type="UnivesriryCtx2.Store.Specializations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subjects">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Specializations">
+        <PropertyRef Name="SubjectsId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="UnivesriryCtx2" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="UnivesriryCtx2Container" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Specializations" EntityType="UnivesriryCtx2.Specializations" />
+          <EntitySet Name="StudentsSet" EntityType="UnivesriryCtx2.Students" />
+          <EntitySet Name="SubjectsSet" EntityType="UnivesriryCtx2.Subjects" />
+          <AssociationSet Name="StudentsSpecializations" Association="UnivesriryCtx2.StudentsSpecializations">
+            <End Role="Students" EntitySet="StudentsSet" />
+            <End Role="Specializations" EntitySet="Specializations" />
+          </AssociationSet>
+          <AssociationSet Name="SubjectsSpecializations" Association="UnivesriryCtx2.SubjectsSpecializations">
+            <End Role="Subjects" EntitySet="SubjectsSet" />
+            <End Role="Specializations" EntitySet="Specializations" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Specializations">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <NavigationProperty Name="Students" Relationship="UnivesriryCtx2.StudentsSpecializations" FromRole="Specializations" ToRole="Students" />
+          <Property Name="StudentsId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Subjects" Relationship="UnivesriryCtx2.SubjectsSpecializations" FromRole="Specializations" ToRole="Subjects" />
+          <Property Name="SubjectsId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Students">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="Surname" Type="String" Nullable="false" />
+          <Property Name="Address" Type="String" Nullable="false" />
+          <Property Name="Phone" Type="String" Nullable="false" />
+          <NavigationProperty Name="Specializations" Relationship="UnivesriryCtx2.StudentsSpecializations" FromRole="Students" ToRole="Specializations" />
+        </EntityType>
+        <EntityType Name="Subjects">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="AmountOfHour" Type="String" Nullable="false" />
+          <NavigationProperty Name="Specializations" Relationship="UnivesriryCtx2.SubjectsSpecializations" FromRole="Subjects" ToRole="Specializations" />
+        </EntityType>
+        <Association Name="StudentsSpecializations">
+          <End Type="UnivesriryCtx2.Students" Role="Students" Multiplicity="1" />
+          <End Type="UnivesriryCtx2.Specializations" Role="Specializations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Students">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Specializations">
+              <PropertyRef Name="StudentsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SubjectsSpecializations">
+          <End Type="UnivesriryCtx2.Subjects" Role="Subjects" Multiplicity="1" />
+          <End Type="UnivesriryCtx2.Specializations" Role="Specializations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Subjects">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Specializations">
+              <PropertyRef Name="SubjectsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UnivesriryCtx2StoreContainer" CdmEntityContainer="UnivesriryCtx2Container">
+    <EntitySetMapping Name="Specializations">
+      <EntityTypeMapping TypeName="IsTypeOf(UnivesriryCtx2.Specializations)">
+        <MappingFragment StoreEntitySet="Specializations">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="StudentsId" ColumnName="StudentsId" />
+          <ScalarProperty Name="SubjectsId" ColumnName="SubjectsId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(UnivesriryCtx2.Students)">
+        <MappingFragment StoreEntitySet="StudentsSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubjectsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(UnivesriryCtx2.Subjects)">
+        <MappingFragment StoreEntitySet="SubjectsSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="AmountOfHour" ColumnName="AmountOfHour" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
