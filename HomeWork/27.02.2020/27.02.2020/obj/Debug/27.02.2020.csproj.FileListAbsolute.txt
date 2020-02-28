@@ -17,3 +17,4 @@ E:\EntityFramework\HomeWork\27.02.2020\27.02.2020\obj\Debug\27.02.2020.csproj.Ge
 E:\EntityFramework\HomeWork\27.02.2020\27.02.2020\obj\Debug\27.02.2020.csproj.CopyComplete
 E:\EntityFramework\HomeWork\27.02.2020\27.02.2020\obj\Debug\27.02.2020.exe
 E:\EntityFramework\HomeWork\27.02.2020\27.02.2020\obj\Debug\27.02.2020.pdb
+E:\EntityFramework\HomeWork\27.02.2020\27.02.2020\obj\Debug\27.02.2020_Content.g.cs
