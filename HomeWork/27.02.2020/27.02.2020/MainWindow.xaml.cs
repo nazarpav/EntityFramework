@@ -82,7 +82,7 @@ namespace _27._02._2020
             ListBoxRead.Items.Clear();
             foreach (var i in c.Users)
             {
-                ListBoxRead.Items.Add(i.);
+                ListBoxRead.Items.Add(i);
             }
         }
         private void UpdatedId_TextChanged(object sender, TextChangedEventArgs e)
