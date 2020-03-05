@@ -1,0 +1,44 @@
+﻿<Window x:Class="_29._02._2020.Create_UpdateStudent"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_29._02._2020"
+        mc:Ignorable="d"
+        Title="Create_UpdateStudent" Height="450" Width="800" Background="#FF503481">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Create Specialization" Name="Create_UpdateSpecializationLabel" HorizontalAlignment="Center" VerticalContentAlignment ="Center" FontSize="18" FontFamily="Segoe UI Black" Grid.ColumnSpan="2"/>
+        <TextBox Name="Create_UpdateSpecializatinTextBoxName" Grid.Row="1" Background="#33B0B0B0" Grid.Column="1" FontSize="18" FontFamily="Segoe UI Black" VerticalContentAlignment="Center"/>
+        <Label Content="Name" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalContentAlignment ="Center" FontSize="18" FontFamily="Segoe UI Black"/>
+        <TextBox Name="Create_UpdateSpecializatinTextBoxSurname" Grid.Row="2" Background="#33B0B0B0" Grid.Column="1" FontSize="18" FontFamily="Segoe UI Black" VerticalContentAlignment="Center"/>
+        <Label Content="Surname" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalContentAlignment ="Center" FontSize="18" FontFamily="Segoe UI Black"/>
+        <TextBox Name="Create_UpdateSpecializatinTextBoxAddress" Grid.Row="3" Background="#33B0B0B0" Grid.Column="1" FontSize="18" FontFamily="Segoe UI Black" VerticalContentAlignment="Center"/>
+        <Label Content="Address" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalContentAlignment ="Center" FontSize="18" FontFamily="Segoe UI Black"/>
+        <TextBox Name="Create_UpdateSpecializatinTextBoxPhone" Grid.Row="4" Background="#33B0B0B0" Grid.Column="1" FontSize="18" FontFamily="Segoe UI Black" VerticalContentAlignment="Center"/>
+        <Label Content="Phone" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Center" VerticalContentAlignment ="Center" FontSize="18" FontFamily="Segoe UI Black"/>
+        <TextBox Name="Create_UpdateSpecializatinTextBoxSpecialization_Id" Grid.Row="5" Background="#33B0B0B0" Grid.Column="1" FontSize="18" FontFamily="Segoe UI Black" VerticalContentAlignment="Center"/>
+        <Label Content="Specialization id" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center" VerticalContentAlignment ="Center" FontSize="18" FontFamily="Segoe UI Black"/>
+        <Button Content="Create" Grid.Row="6" Name="Create_UpdateSpecializationButton" Grid.ColumnSpan="2" HorizontalAlignment="Center" Padding="50,0,50,0" FontSize="18" FontFamily="Segoe UI Black" Background="#FF5F4B72" Click="Create_UpdateSpecializationButton_Click"/>
+        <Grid Grid.Row="6" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Label  Visibility="Hidden" Name="UpdateSpecializatinIDLabel" Content="Updated ID>" FontSize="16" FontFamily="Segoe UI Black" VerticalContentAlignment="Center"/>
+            <TextBox TextChanged="UpdateSpecializatinID_TextChanged" Name="UpdateSpecializatinID" Visibility="Hidden" Background="#33B0B0B0" Grid.Column="1" FontSize="16" FontFamily="Segoe UI Black" VerticalContentAlignment="Center"/>
+        </Grid>
+    </Grid>
+</Window>
