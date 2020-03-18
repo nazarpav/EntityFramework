@@ -22,7 +22,7 @@ namespace _29._02._2020
         public Create_UpdateSubjects(string type)
         {
             InitializeComponent();
-            Create_UpdateSpecializationLabel.Content = type + " Specialization";
+            Create_UpdateSpecializationLabel.Content = type + " Subjects";
             Create_UpdateSpecializationButton.Content = type;
             if (type == "Update")
             {
@@ -35,8 +35,8 @@ namespace _29._02._2020
         {
             using (UniversityEntities en = new UniversityEntities())
             {
-                int AOH;
-                int SpId;
+                int AOH=-1;
+                int SpId=-1;
                 if (Create_UpdateSpecializationButton.Content.ToString() == "Create")
                 {
                     if (!int.TryParse(Create_UpdateSpecializatinTextBoxAmounthOfHour.Text, out AOH) ||
@@ -50,9 +50,10 @@ namespace _29._02._2020
                 else if (Create_UpdateSpecializationButton.Content.ToString() == "Update")
                 {
                     int outId;
-                    if (!int.TryParse(UpdateSpecializatinID.Text, out outId) ||
+                    if ((!int.TryParse(UpdateSpecializatinID.Text, out outId) ||
                     !int.TryParse(Create_UpdateSpecializatinTextBoxAmounthOfHour.Text, out AOH) ||
-                    !int.TryParse(Create_UpdateSpecializatinTextBoxSpecialization_Id.Text, out SpId))
+                    !int.TryParse(Create_UpdateSpecializatinTextBoxSpecialization_Id.Text, out SpId))&&
+                    en.Subjects.Where(q => q.Id == outId).Count() > 0)
                     {
                         MessageBox.Show("Inkorect Inputed data");
                         return;
