@@ -10,6 +10,7 @@
             : base("name=BarbersDB_Model")
         {
         }
+        
         public virtual DbSet<VisitingArchive> VisitingArchives { get; set; }
         public virtual DbSet<Positions> Positions { get; set; }
         public virtual DbSet<Barbers> Barbers { get; set; }

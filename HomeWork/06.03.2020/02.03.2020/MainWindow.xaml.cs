@@ -16,9 +16,6 @@ using System.Windows.Shapes;
 
 namespace _02._03._2020
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
