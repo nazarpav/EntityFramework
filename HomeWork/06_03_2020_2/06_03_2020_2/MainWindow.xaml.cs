@@ -22,7 +22,7 @@ namespace MFluentApi
             InitializeComponent();
             using (Model.ShopNetwork ctx = new Model.ShopNetwork())
             {
-                ctx..Add(new Model.Categiries() { Name="C9"});
+                ctx.Categiries.Add(new Model.Categiries() { Name="C9"});
                 //ctx.Cities.Add(new Model.Cities() { CountryId =1,Name="fddf"});
                 ctx.SaveChanges();
             }
