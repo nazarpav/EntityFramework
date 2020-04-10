@@ -1,0 +1,11 @@
+E:\EntityFramework\HomeWork\Exam_10_03_2020\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+E:\EntityFramework\HomeWork\Exam_10_03_2020\DAL\bin\Debug\DAL.dll.config
+E:\EntityFramework\HomeWork\Exam_10_03_2020\DAL\bin\Debug\DAL.dll
+E:\EntityFramework\HomeWork\Exam_10_03_2020\DAL\bin\Debug\DAL.pdb
+E:\EntityFramework\HomeWork\Exam_10_03_2020\DAL\bin\Debug\EntityFramework.dll
+E:\EntityFramework\HomeWork\Exam_10_03_2020\DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\EntityFramework\HomeWork\Exam_10_03_2020\DAL\bin\Debug\EntityFramework.xml
+E:\EntityFramework\HomeWork\Exam_10_03_2020\DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\EntityFramework\HomeWork\Exam_10_03_2020\DAL\obj\Debug\DAL.csproj.CopyComplete
+E:\EntityFramework\HomeWork\Exam_10_03_2020\DAL\obj\Debug\DAL.dll
+E:\EntityFramework\HomeWork\Exam_10_03_2020\DAL\obj\Debug\DAL.pdb
